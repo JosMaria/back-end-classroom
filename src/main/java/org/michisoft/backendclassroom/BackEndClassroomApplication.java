@@ -12,6 +12,7 @@ import org.springframework.web.reactive.function.client.WebClient;
 
 import java.util.Arrays;
 import java.util.List;
+
 @SpringBootApplication
 public class BackEndClassroomApplication {
 
@@ -21,7 +22,7 @@ public class BackEndClassroomApplication {
         SpringApplication.run(BackEndClassroomApplication.class, args);
     }
 
-    /*@Bean
+    @Bean
     public CorsFilter corsFilter() {
         CorsConfiguration corsConfiguration = new CorsConfiguration();
         corsConfiguration.setAllowCredentials(true);
@@ -32,10 +33,11 @@ public class BackEndClassroomApplication {
         corsConfiguration.setExposedHeaders(Arrays.asList("Origin", "Content-Type", "Accept", "Authorization",
                 "Access-Control-Allow-Origin", "Access-Control-Allow-Origin", "Access-Control-Allow-Credentials"));
         corsConfiguration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS"));
+
         UrlBasedCorsConfigurationSource urlBasedCorsConfigurationSource = new UrlBasedCorsConfigurationSource();
         urlBasedCorsConfigurationSource.registerCorsConfiguration("/**", corsConfiguration);
         return new CorsFilter(urlBasedCorsConfigurationSource);
-    }*/
+    }
 
     /*@Bean
     CorsConfigurationSource corsConfigurationSource() {
@@ -46,6 +48,7 @@ public class BackEndClassroomApplication {
 
         return source;
     }*/
+
     @Bean
     public WebClient.Builder getWebClient() {
         return WebClient.builder();

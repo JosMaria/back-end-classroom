@@ -2,7 +2,7 @@ package org.michisoft.backendclassroom.service.impl;
 
 import lombok.RequiredArgsConstructor;
 import org.michisoft.backendclassroom.dto.TeacherDTO;
-import org.michisoft.backendclassroom.service.HomeService;
+import org.michisoft.backendclassroom.service.TeacherService;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -19,7 +19,7 @@ import java.util.function.Function;
 
 @Service
 @RequiredArgsConstructor
-public class HomeServiceImpl implements HomeService, UserDetailsService {
+public class TeacherServiceImpl implements TeacherService, UserDetailsService {
 
     private static final String DOMAIN = "http://localhost:8080/";
     private static final String GET_ALL_TEACHERS = "api/v1/teachers";
