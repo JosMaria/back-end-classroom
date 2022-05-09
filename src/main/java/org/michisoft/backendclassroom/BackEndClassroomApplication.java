@@ -39,16 +39,6 @@ public class BackEndClassroomApplication {
         return new CorsFilter(urlBasedCorsConfigurationSource);
     }
 
-    /*@Bean
-    CorsConfigurationSource corsConfigurationSource() {
-        final UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
-
-        CorsConfiguration corsConfiguration = new CorsConfiguration().applyPermitDefaultValues();
-        source.registerCorsConfiguration("/**", corsConfiguration);
-
-        return source;
-    }*/
-
     @Bean
     public WebClient.Builder getWebClient() {
         return WebClient.builder();
